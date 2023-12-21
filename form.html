@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tenancy Application Form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+<div class="antialiased text-gray-900 px-6">
+    <div class="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
+      <div class="py-8">
+        <h1 class="text-4xl font-bold">Apply Tenancy Form</h1>
+        
+       </div>
+      <div class="py-12">
+        <div class="mt-8 max-w-md">
+          <div class="grid grid-cols-1 gap-6">
+            <label class="block">
+              <span class="text-gray-700">Full name</span>
+              <input type="text" class="mt-1 block w-full" placeholder="" />
+            </label><br><br>
+            <label class="block ">
+              <span class="text-gray-700">Email address</span>
+              <input type="email" class="mt-1 block w-full" placeholder="john@example.com" />
+            </label><br><br>
+            <label class="block">
+              <span class="text-gray-700">viewing Date</span>
+              <input type="date" class="mt-1 block w-full" />
+            </label><br><br>
+            <label class="block">
+              <span class="text-gray-700">Prefered Tenancy Type</span>
+              <select class="block w-full mt-1">
+                <option>Fixed</option>
+                <option>Periodic</option>
+                </select>
+            </label><br><br>
+            <label class="block">
+                <span class="text-gray-700">How Long you are looking for</span>
+                 <select class="block w-full mt-1">
+                 <option>One month</option>
+                 <option>Two months</option>
+                 <option>Three months</option>
+                 <option>Four months</option>
+                 <option>Five months</option>
+                 <option>Six months</option>
+                 <option>Seven months</option>
+                 <option>Eight months</option>
+                 <option>Nine months</option>
+                 <option>Ten months</option>
+                 <option>Eleven months</option>                 
+                 <option> one year</option>
+                  <option>Two years</option>
+                  <option>Three years</option>
+                  </select>
+              </label><br><br>
+
+
+            <label class="block">
+              <span class="text-gray-700">Additional details</span>
+              <textarea class="mt-1 block w-full" rows="3"></textarea>
+            </label><br>
+            <div class="block">
+              <div class="mt-2">
+                <div>
+                  <label class="inline-flex items-center">
+                    <input type="checkbox" checked />
+                    <span class="ml-2">Email me news and special offers</span>
+                  </label><br><br>
+                  <button type="submit" class="btn" onclick="openPopup()">submit</button>
+                        <div class="popup" id="popup">
+                        <img src="./images/tick.png" alt="#">
+                        <h4>Thank you</h4>
+                        <p>your details successfully submitted. Thanks!</p>
+                        <button type="button" onclick="closePopup()">OK </button>
+                      </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+
+      </script>
+</body>
+</html>
